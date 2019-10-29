@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<annotation>
+  <folder>images</folder>
+  <filename>pascal-mini/00000</filename>
+  <path>/pascal-mini/000001</path>
+  <source>
+    <database>Unknown</database>
+  </source>
+  <size>
+    <width>500</width>
+    <height>353</height>
+    <depth>3</depth>
+  </size>
+  <segmented>0</segmented>
+  <object>
+    <name>person</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9830313920974731</confidence>
+    <bndbox>
+      <xmin>43</xmin>
+      <ymin>33</ymin>
+      <xmax>353</xmax>
+      <ymax>468</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>dog</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <confidence>0.9000566005706787</confidence>
+    <bndbox>
+      <xmin>58</xmin>
+      <ymin>232</ymin>
+      <xmax>184</xmax>
+      <ymax>371</ymax>
+    </bndbox>
+  </object>
+</annotation>
