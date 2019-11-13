@@ -104,13 +104,13 @@ def generateXML(filename,outputPath,w,h,d,boxes):
         childDifficult.text = '0'
         childBndBox = ET.SubElement(childObject, 'bndbox')
         childXmin = ET.SubElement(childBndBox, 'xmin')
-        childXmin.text = str(x.asscalar())
+        childXmin.text = str(int(x))
         childYmin = ET.SubElement(childBndBox, 'ymin')
-        childYmin.text = str(y.asscalar())
+        childYmin.text = str(int(y))
         childXmax = ET.SubElement(childBndBox, 'xmax')
-        childXmax.text = str(xmax.asscalar())
+        childXmax.text = str(int(xmax))
         childYmax = ET.SubElement(childBndBox, 'ymax')
-        childYmax.text = str(ymax.asscalar())
+        childYmax.text = str(int(ymax))
     return prettify(top)
 
 # loop over the input image paths
