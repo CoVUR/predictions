@@ -24,6 +24,8 @@ ap.add_argument("-m", "--model", required=True,
 	help="path to pre-trained model")
 ap.add_argument("-i", "--input", required=True,
 	help="path to directory containing input images")
+ap.add_argument("-l", "--labels", required=True,
+	help="path to class labels")
 ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())
@@ -34,26 +36,8 @@ args = vars(ap.parse_args())
 
 
 ##### J. Esto hay que cambiarlo dependiendo de cada problema
-classes = ['tinamou',
-'red_fox',
-'wood_mouse',
-'spiny_rat',
-'agouti',
-'red_brocket_deer',
-'bird_spec',
-'red_deer',
-'european_hare',
-'ocelot',
-'white_nosed_coati',
-'paca',
-'collared_peccary',
-'red_squirrel',
-'common_opossum',
-'coiban_agouti',
-'wild_boar',
-'white_tailed_deer',
-'mouflon',
-'roe_deer']
+LABELS = open(args["labels"]).read().strip().split("\n")
+classes =[L.split(",")[0] for L in LABELS]
 
 
 class TestConfig(Config):
