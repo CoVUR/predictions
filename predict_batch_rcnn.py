@@ -38,15 +38,15 @@ args = vars(ap.parse_args())
 ##### J. Esto hay que cambiarlo dependiendo de cada problema
 LABELS = open(args["labels"]).read().strip().split("\n")
 classes =[L.split(",")[0] for L in LABELS]
-
+print(classes)
 
 class TestConfig(Config):
      NAME = "test"
      GPU_COUNT = 1
-     BACKBONE = "resnet50"
-     IMAGE_RESIZE_MODE = "square"
-     IMAGE_MIN_DIM = 512
-     IMAGE_MAX_DIM = 512
+     #BACKBONE = "resnet50"
+     #IMAGE_RESIZE_MODE = "square"
+     #IMAGE_MIN_DIM = 512
+     #IMAGE_MAX_DIM = 512
      IMAGES_PER_GPU = 1
      ##### J. Esto hay que cambiarlo dependiendo de cada problema
      NUM_CLASSES = 1 + len(classes)
